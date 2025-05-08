@@ -1,5 +1,5 @@
 # Introduction to SQL 
-(.SQL File contains all this information aswell)
+(.SQL File contains all this information )
 
 /*Create your first database*/
 ---
@@ -16,6 +16,7 @@ email VARCHAR(100)
 );
 
 /*Insert Simple Data*/
+---
 INSERT INTO Students (studentId, firstName, lastName , age , email) VALUES
 (1, 'Jhon' , 'Doe' , 20 , 'jhon.doe@mail.com'),
 (2, 'Mark' , 'Smith' , 22 , 'marks@mail.com'),
@@ -24,12 +25,14 @@ INSERT INTO Students (studentId, firstName, lastName , age , email) VALUES
 (5, 'Carlos' , 'Sainz' , 23 , 'carlos.sainz@mail.com');
 
 /*BONUS: Create Second table Course*/
+---
 CREATE TABLE Courses(
 courseId INT PRIMARY KEY,
 courseName VARCHAR(50),
 courseDescription VARCHAR(150));
 
 /*BONUS: Inserting data for Courses*/
+---
 INSERT INTO Courses (courseId , courseName , courseDescription) VALUES 
 (1 , "Data Bases" , "Introduction to Data Bases"),
 (2 , "Web Development" , "Basic web development with React"),
@@ -37,11 +40,13 @@ INSERT INTO Courses (courseId , courseName , courseDescription) VALUES
 (4 , "Java" , "Basic to Advanced Java topics for app development");
 
 /*BONUS: Altering table to create a relationship between Students and Courses*/
+---
 ALTER TABLE Students 
 ADD COLUMN courseId INT ,
 ADD FOREIGN KEY (courseId) REFERENCES Students (studentId);
 
 /*BONUS: Creating (Updating students) relationships between Students and Courses (Students have A Course)*/
+---
 UPDATE Students SET courseId = 1 WHERE studentId = 1;
 UPDATE Students SET courseId = 2 WHERE studentId = 2;
 UPDATE Students SET courseId = 4 WHERE studentId = 3;
@@ -61,16 +66,20 @@ and accessibility.
 */
 
 /*BASIC COMMANDS*/
+---
 
 /*Insert Data*/
+---
 INSERT INTO Students (studentId, firstName, lastName , age , email , courseId) VALUES
 (6, 'Jose' , 'Jhonson' , 21 , 'jhonson.@mail.com', 3),
 (7, 'Danny' , 'Lopez' , 20 , 'danny.lop@mail.com', 4);
 
 /*Select Data*/
+---
 SELECT * FROM students;
 
 /*Modify the age of one student*/
+---
 UPDATE Students SET age = 22 WHERE studentId = 6;
 
 /*
