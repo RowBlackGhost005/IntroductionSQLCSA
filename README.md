@@ -1,5 +1,5 @@
 # Introduction to SQL 
-(.SQL File contains all this information )
+**ALL THIS INFORMATION IS CONTAINED IN THE .SQL FILE**
 
 /*Create your first database*/
 ---
