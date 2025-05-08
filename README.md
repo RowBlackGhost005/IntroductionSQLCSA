@@ -2,9 +2,11 @@
 (.SQL File contains all this information aswell)
 
 /*Create your first database*/
+---
 CREATE DATABASE StudentRecords;
 
 /*Create Table with Appropiate Data Types*/
+---
 CREATE TABLE Students(
 studentId INT PRIMARY KEY,
 firstName VARCHAR(50),
